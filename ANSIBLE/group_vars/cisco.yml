@@ -1,0 +1,11 @@
+domain: cisco.com
+os: ios
+name_server:
+  - 8.8.8.8
+  - 9.9.9.9
+snmp_servers:
+- 10.1.1.1
+- 10.2.1.1
+users:
+  admin: password
+  cisco: cisco123

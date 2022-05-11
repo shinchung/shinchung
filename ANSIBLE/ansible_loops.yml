@@ -1,0 +1,18 @@
+---
+- name: Ansible Loop over List
+  hosts: cisco
+  gather_facts: no
+  tasks:
+  - name: Loop over DNS server
+    debug:
+      msg: "ip name-server {{item}}"
+    loop: "{{name_server}}"
+
+- name: Ansible Loop over a dictionary
+  hosts: cisco
+  gather_facts: no
+  tasks:
+  - name: Loop over username and password
+    debug: 
+      msg: "Username: {{item.key}} Password: {{item.value}}"
+    with_dict: "{{users}}"
